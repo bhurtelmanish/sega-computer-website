@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Chilanka&family=Finlandica&family=Fira+Sans:wght@200;300;400&family=Geologica:wght@100;200;300;400;500&family=Grenze+Gotisch&family=Hubballi&family=Inter:wght@200;300;400;500;700;800&family=Lato&family=Lobster&family=Lobster+Two:wght@700&family=Manrope:wght@300&family=Martel&family=Noto+Sans&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=Oswald:wght@200;300;400&family=Poppins:wght@200;300;500&family=Quicksand&family=Raleway:ital,wght@0,200;0,300;0,400;0,800;1,700&family=Roboto:wght@100;300;400;700&family=Sansita+Swashed:wght@300&family=Wix+Madefor+Display:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --blackColor: rgb(33, 33, 33);
+    --whiteColor: rgb(247, 247, 247);
+    --buttonColor: rgb(37, 99, 234);
+    --navHeight: 4rem;
+    --redColor: rgb(219, 34, 25);
+}
+
+body{
+    overflow-x: hidden !important;
+    position: relative;
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-search-cancel-button{
+    display: none;
+}
+

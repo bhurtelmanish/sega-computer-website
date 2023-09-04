@@ -1,0 +1,90 @@
+.active{
+  /* display: flex; */
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.inactive{
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.show{
+  display: flex;
+}
+.hidden{
+  display: none;
+}
+
+@media (min-width:640px) {
+  .links-container{
+    /* display: flex !important; */
+    opacity: 1 !important;
+  }
+}
+
+.quiz-dropdown , .about-dropdown{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+.homepage{
+  min-height: calc(100vh - var(--navHeight)) !important;
+}
+.homepage-image{
+  position: relative !important;
+}
+
+
+
+/* Swiper CSS */
+
+/* .swiper {
+  width: 100vw;
+  height: 100vh;
+} */
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.image-container{
+  border:2px solid rgb(226, 226, 226);
+}
+
+
+  .second-section{
+    display: none;
+    justify-content: center !important;
+  }
+
+
+  @media (min-width: 768px) {
+    .second-section{
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+
+
+  .mySwiper{
+    /* height: 100vh; */
+    width: 100vw;
+  }
+
