@@ -5,6 +5,7 @@ import '../index.css'
 import '../App.css'
 import AboutDropdown from './dropdowns/AboutDropdown'
 import QuizDropdown from './dropdowns/QuizDropdown'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isVisible , setisVisible] = useState(false);
@@ -50,18 +51,18 @@ const Navbar = () => {
       </div>
         
         <ul className={`${isVisible ? 'active' : 'inactive'} z-[500] links-container bg-gray-100 w-screen top-16 min-h-fit absolute flex flex-col px-10 py-12 right-0 gap-4 sm:min-h-0 sm:bg-transparent sm:w-fit sm:flex-row sm:static sm:px-0 sm:py-0 sm:gap-0 md:gap-2 lg:gap-4`}>
-          <li className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 gap-1'>Home</li>
+          <li onClick={barsClicked}><Link to="/" className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 gap-1' >Home</Link></li>
           
           <li ref={aboutRef} onClick={aboutMenuClicked}  className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 relative'>
-            About <FiChevronDown className='text-lg'/>
-            <AboutDropdown isVisible={aboutMenu}/>
+             About <FiChevronDown className='text-lg'/>
+            <AboutDropdown isVisible={aboutMenu} click={barsClicked}/>
           </li>
-          <li className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 gap-1'>Courses</li>
+          <li onClick={barsClicked} ><Link to='/Courses'  className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 gap-1'> Courses </Link></li>
           <li ref={quizRef} onClick={quizMenuClicked} className='font-medium links text-base z-[200] cursor-pointer w-fit h-10 flex px-2 items-center hover:text-blue-800 rounded-md sm:text-base sm:px-5 relative'>
-            Quiz <FiChevronDown  className='text-lg'/>
-            <QuizDropdown isVisible={quizMenu}/>
+           Quiz <FiChevronDown  className='text-lg'/>
+            <QuizDropdown isVisible={quizMenu} click={barsClicked}/>
           </li>
-          <button className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer w-fit px-6 h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>Contact</button>
+          <button onClick={barsClicked} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer w-fit px-6 h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'> <Link to='/Contact' >Contact</Link></button>
         </ul>
         <i onClick={barsClicked} className={`${bars} fa-solid fa-bars-staggered cursor-pointer text-2xl  absolute right-6 sm:hidden`}> </i>
      </div>
