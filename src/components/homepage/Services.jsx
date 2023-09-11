@@ -3,11 +3,13 @@ import '../../App.css'
 import { ServiceData }  from '../../../public/ServiceData'
 
 const Services = () => {
-  const [selectedTitle , setSelectedTitle] = useState('all');
+  const [selectedTitle , setSelectedTitle] = useState('classroom');
   const filterMenu = (title) => {
     setSelectedTitle(title);
   }
-  const filterImages = selectedTitle === 'all' ? ServiceData : ServiceData.filter(image => image.title.includes(selectedTitle));
+  const filterImages = selectedTitle === 'classroom' ? 
+  ServiceData.filter(image => image.title.includes('classroom')) : 
+  ServiceData.filter(image => image.title.includes(selectedTitle));
   return (
     <>
      <div id='services' className=' h-auto px-4  w-screen mt-14'>
@@ -20,7 +22,7 @@ const Services = () => {
             <button onClick={()=> filterMenu('lab')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>Lab</button>
             <button onClick={()=> filterMenu('exam')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>Exams</button>
             <button onClick={()=> filterMenu('event')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>Events</button>
-            <button onClick={()=> filterMenu('all')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>All</button>
+            {/* <button onClick={()=> filterMenu('all')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>All</button> */}
         </div>
 
         <div className='h-[70rem] service-img-container gap-3 lg:gap-5 max-w-[62rem] bg-gray-100 mx-auto mt-10'>
