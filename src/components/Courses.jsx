@@ -18,8 +18,6 @@ const Courses = () => {
     <>
      <div className='w-screen h-auto '>
         <img src={courseLearning} alt="Course Learning" className='cursor-pointer m-auto block sm:h-[33rem]' />
-
-
        <div className=' flex flex-col'>
        <div className='flex w-screen flex-col px-5 mt-2'>
           <p className='text-[2.3rem] font-medium'>Important <strong> Courses</strong> </p>
