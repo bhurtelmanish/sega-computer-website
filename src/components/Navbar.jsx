@@ -45,7 +45,7 @@ const Navbar = () => {
   }
   return (
     <>
-     <div className='text-[var(--blackColor)] flex relative h-[var(--navHeight)] py-0 shadow-sm justify-between items-center px-6 md:px-16 sm:px-7 z-[300] sm:py-10 lg:px-24'>
+     <div className='relative text-[var(--blackColor)] flex  w-screen h-[var(--navHeight)] py-0 shadow-sm justify-between items-center px-6 md:px-16 sm:px-7 z-[300] sm:py-10 lg:px-24'>
       <div className='flex items-end gap-4'>
         <img src={logo} alt="Sega Computer Logo" className='h-10 sm:h-12 w-auto cursor-pointer' />
       </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
            Quiz <FiChevronDown  className='text-lg'/>
             <QuizDropdown isVisible={quizMenu} click={barsClicked}/>
           </li>
-          <button onClick={barsClicked} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer w-fit px-6 h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'> <Link to='/Contact' >Contact</Link></button>
+          <Link to='/Contact' ><button onClick={barsClicked} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer w-fit px-6 h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'> Contact</button></Link>
         </ul>
         <i onClick={barsClicked} className={`${bars} fa-solid fa-bars-staggered cursor-pointer text-2xl  absolute right-6 sm:hidden`}> </i>
      </div>

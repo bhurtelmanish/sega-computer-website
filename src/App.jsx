@@ -14,10 +14,12 @@ const App = () => {
       <Navbar />
       {/* <BrowserRouter> */}
        <Routes>
+        
          <Route path='/' element={<Homepage />} />
          <Route path='/courses' element={<Courses />} />
          <Route path='/quiz' element={<Quiz />} />
          <Route path='/contact' element={<Contact />} />
+         
        </Routes>
       {/* </BrowserRouter> */}
       <Footer />

@@ -2,7 +2,7 @@ import React , { useState } from 'react'
 import '../App.css'
 import '../index.css'
 import courseLearning from '../images/courses.png'
-import { Data } from './Data'
+import { Data } from './data/Data'
 import { FiChevronDown , FiChevronUp } from 'react-icons/fi'
 import { SiConcourse } from 'react-icons/si'
 

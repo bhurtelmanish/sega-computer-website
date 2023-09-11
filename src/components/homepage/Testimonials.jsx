@@ -3,95 +3,58 @@ import React from 'react'
 const Testimonials = () => {
   return (
     <>
-     <section className="py-10  sm:py-16 lg:py-24">
+<section className="py-10 sm:py-16 lg:py-24">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">What our students say</h2>
-            <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+            <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">Trusted by <span className="text-blue-600">30k+</span> world className companies & design teams</h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 px-4 mt-12 sm:px-0 xl:mt-20 xl:grid-cols-4 sm:grid-cols-2">
-           <TestimonialCard
+        <div className="grid max-w-xl grid-cols-1 mx-auto mt-8 text-center lg:max-w-full sm:mt-12 lg:mt-20 lg:grid-cols-3 gap-x-6 xl:gap-x-12 gap-y-6">
+        <TestimonialCard
            name="Manish Bhurtel" 
            id="@manishbh_22" 
            desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
+           position="Project Manager at Sega Computer Link"
            />
            <TestimonialCard
            name="Manish Bhurtel" 
            id="@manishbh_22" 
            desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
+           position="Project Manager at Sega Computer Link"
            />
            <TestimonialCard
            name="Manish Bhurtel" 
            id="@manishbh_22" 
            desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
-           />
-           <TestimonialCard
-           name="Manish Bhurtel" 
-           id="@manishbh_22" 
-           desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
-           />
-           <TestimonialCard
-           name="Manish Bhurtel" 
-           id="@manishbh_22" 
-           desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
-           />
-           <TestimonialCard
-           name="Manish Bhurtel" 
-           id="@manishbh_22" 
-           desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
-           />
-           <TestimonialCard
-           name="Manish Bhurtel" 
-           id="@manishbh_22" 
-           desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
-           />
-           <TestimonialCard
-           name="Manish Bhurtel" 
-           id="@manishbh_22" 
-           desc="You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save."
-           status="#celebrations"
+           position="Project Manager at Sega Computer Link"
            />
         </div>
     </div>
 </section>
-
     </>
   )
 }
 
-const TestimonialCard = ({name , id , desc , status}) =>{
+const TestimonialCard = ({name , desc , position}) =>{
     return(
         <>
-          <div className="overflow-hidden testimonial rounded-2xl cursor-pointer">
-                <div className="px-5 py-6">
-                    <div className="flex items-center justify-between">
-                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-1.jpg" alt="" />
-                        <div className="min-w-0 ml-3 mr-auto">
-                            <p className="text-base font-semibold text-black truncate">{name}</p>
-                            <p className="text-sm text-gray-600 truncate">{id}</p>
+            <div className="overflow-hidden bg-white rounded-md shadow">
+                <div className="px-8 py-12">
+                    <div className="relative w-24 h-24 mx-auto">
+                        <img className="relative object-cover w-24 h-24 mx-auto rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/1/avatar-1.jpg" alt="" />
+                        <div className="absolute top-0 right-0 flex items-center justify-center bg-blue-600 rounded-full w-7 h-7">
+                            <svg className="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"
+                                ></path>
+                            </svg>
                         </div>
-                            <a href="#" title="" className="inline-block text-sky-500">
-                                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
-                                    ></path>
-                                </svg>
-                            </a>
                     </div>
-                    <blockquote className="mt-5">
-                        <p className="text-base text-gray-800">
-                            {desc}
-                            <span className="block text-sky-500">{status}</span>
-                        </p>
+                    <blockquote className="mt-7">
+                        <p className="text-lg text-black">“{desc}”</p>
                     </blockquote>
+                    <p className="text-base font-semibold tex-tblack mt-9">{name}</p>
+                    <p className="mt-1 text-base text-gray-600">{position}</p>
                 </div>
             </div>
         </>
