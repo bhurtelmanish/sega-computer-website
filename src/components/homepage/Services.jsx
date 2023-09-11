@@ -6,6 +6,7 @@ const Services = () => {
   const [selectedTitle , setSelectedTitle] = useState('classroom');
   const filterMenu = (title) => {
     setSelectedTitle(title);
+    
   }
   const filterImages = selectedTitle === 'classroom' ? 
   ServiceData.filter(image => image.title.includes('classroom')) : 
@@ -25,9 +26,9 @@ const Services = () => {
             {/* <button onClick={()=> filterMenu('all')} className='bg-[var(--buttonColor)] text-white font-medium links text-base z-[100] cursor-pointer  min-w-[7rem] px-0 justify-center h-11 flex items-center hover:bg-blue-700 rounded-md sm:text-base sm:px-5'>All</button> */}
         </div>
 
-        <div className='h-[70rem] service-img-container gap-3 lg:gap-5 max-w-[62rem] bg-gray-100 mx-auto mt-10'>
+        <div className='h-[auto] px-4 py-4 service-img-container rounded-xl gap-3 lg:gap-5 max-w-[62rem] bg-gray-100 mx-auto mt-10'>
             {filterImages.map((data)=>(
-                <img key={data.id} src={data.image} alt="Services Images" className='cursor-pointer w-full mb-4' />
+                <img key={data.id} src={data.image} alt="Services Images" className='rounded-xl cursor-pointer w-full mb-4' />
             ))}
         </div>
      </div>
