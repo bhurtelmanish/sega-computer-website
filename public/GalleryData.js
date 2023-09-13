@@ -1,4 +1,4 @@
-export const ServiceData = [
+export const GalleryData = [
     {
         id: '1',
         title: 'classroom',

@@ -3,7 +3,7 @@ import React from 'react'
 const Story = () => {
   return (
     <>
-     <section className="py-10 bg-gray-50 sm:py-16 lg:py-24 mt-14">
+     <section id='achievements' className="py-10 bg-gray-50 sm:py-16 lg:py-24 mt-14 flex flex-col">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
                 <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Numbers tell our story</h2>

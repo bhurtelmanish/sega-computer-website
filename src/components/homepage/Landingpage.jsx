@@ -31,7 +31,6 @@ const Landingpage = () => {
          <button className='hover:bg-blue-700 bg-[var(--buttonColor)] mt-6 text-white font-medium links text-base z-[100] cursor-pointer w-fit px-5 h-12 flex items-center rounded-xl sm:text-base sm:px-5 lg:px-6'>Know More</button>
      </div>
 
-
      <Swiper
         spaceBetween={30}
         centeredSlides={true}

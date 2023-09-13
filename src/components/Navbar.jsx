@@ -20,7 +20,6 @@ const Navbar = () => {
     (bars === "fa-bars-staggared") ? setbars("fa-xmark") : setbars("fa-bars-staggared");
   }
 
-
   const aboutMenuClicked = () =>{
     setaboutMenu(!aboutMenu);
   }
